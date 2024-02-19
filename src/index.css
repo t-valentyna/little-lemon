@@ -79,7 +79,10 @@ header {
   width: min(900px, 90vw);
   margin: 0 auto;
   align-items: center;
-  color: var(--highlight2);
+  & a {
+    color: var(--highlight2);
+    text-decoration: none;
+  }
 
   & li {
     display: inline-block;
@@ -116,7 +119,11 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  color: var(--highlight1);
+  & a, li {
+    color: var(--highlight1);
+    text-decoration: none;
+    font-weight: 400;
+  }
   & img {
     height: 302px;
     width: 200px;
