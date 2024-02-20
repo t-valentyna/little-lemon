@@ -21,37 +21,38 @@ function HomePage() {
             <img src={RestauranFood} alt="The appetizing restaurant dish" height="415" />
         </section>
         <section id="highlights">
-            <header>
+            <div>
                 <h1>This weeks specials!</h1>
                 <button>Online menu</button>
-            </header>
+            </div>
             <div id="cards">
                 <div class="card">
                     <img src={GreekSalad} alt="Greek salad" height="198" />
-                    <header>
+                    <div class="card-body">
+                        <div>
                         <h3>Greek salad</h3>
                         <span class="price">$ 12.99</span>
-                    </header>
+                    </div>
                     <p>xjfcjhgfhgvjh jbljblhg hjvlhvl bhlb hvlhjvlhv lbhlb gkvghvkhgv hvk hvkhv hvkhv hvhkv vgvk gvkghvgh vvv.</p>
-                    <h4>Order a delivery <img src={Scooter} alt="scooter" height="23" /></h4>
+                    <h4>Order a delivery <img src={Scooter} alt="scooter" height="23" /></h4></div>
                 </div>
                 <div class="card">
                     <img src={Bruchetta} alt="Bruchetta" height="198" />
-                    <header>
+                    <div class="card-body"><div>
                         <h3>Bruchetta</h3>
                         <span class="price">$ 12.99</span>
-                    </header>
+                    </div>
                     <p>xjfcjhgfhgvjh jbljblhg hjvlhvl bhlb hvlhjvlhv lbhlb gkvghvkhgv hvk hvkhv hvkhv hvhkv vgvk gvkghvgh vvv.</p>
-                    <h4>Order a delivery <img src={Scooter} alt="scooter" height="23" /></h4>
+                    <h4>Order a delivery <img src={Scooter} alt="scooter" height="23" /></h4></div>
                 </div>
                 <div class="card">
                     <img src={LemonDesert} alt="Lemon desert" height="198" />
-                    <header>
+                    <div class="card-body"><div>
                         <h3>Lemon desert</h3>
                         <span class="price">$ 12.99</span>
-                    </header>
+                    </div>
                     <p>xjfcjhgfhgvjh jbljblhg hjvlhvl bhlb hvlhjvlhv lbhlb gkvghvkhgv hvk hvkhv hvkhv hvhkv vgvk gvkghvgh vvv.</p>
-                    <h4>Order a delivery <img src={Scooter} alt="scooter" height="23" /></h4>
+                    <h4>Order a delivery <img src={Scooter} alt="scooter" height="23" /></h4></div>
                 </div>
             </div>
         </section>
@@ -81,14 +82,16 @@ function HomePage() {
             </div>
         </section>
         <section id="about">
-        <div>
+            <div id="about-body">
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>
-                <p>xjfcjhgfhgvjh jbljblhg hjvlhvl bhlb hvlhjvlhv lbhlb gkvghvkhgv hvk hvkhv hvkhv hvhkv vgvk gvkghvgh vvv.</p>
-                <p>xjfcjhgfhgvjh jbljblhg hjvlhvl bhlb hvlhjvlhv lbhlb gkvghvkhgv hvk hvkhv hvkhv hvhkv vgvk gvkghvgh vvv.</p>
+                <p>xjfcjhgfhgvjh jbljblhg hjvlhvl bhlb hvlhjvlhv lbhlb gkvghvkhgv hvk hvkhv hvkhv hvhkv vgvk gvkghvgh vvv.<br />
+                    xjfcjhgfhgvjh jbljblhg hjvlhvl bhlb hvlhjvlhv lbhlb gkvghvkhgv hvk hvkhv hvkhv hvhkv vgvk gvkghvgh vvv.</p>
             </div>
-            <img src={Chefs1} alt="First chefs' foto" height="415" />
-            <img src={Chefs2} alt="Second chefs' foto" height="415" />
+            <div id="chefsFotos">
+                <img id="chefs1" src={Chefs1} alt="First chefs' foto" height="402" />
+                <img id="chefs2" src={Chefs2} alt="Second chefs' foto" height="402" />
+            </div>
         </section>
       </>
     );

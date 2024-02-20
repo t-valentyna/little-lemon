@@ -9,15 +9,18 @@
   --highlight2: #333333;
   --font1: "Markazi Text", serif;
   --font2: "Karla", sans-serif;
+  --paddingRightLeft: max(calc((100vw - 900px)/2), 5vw);
+  @media screen and (max-width: 800px) {
+    --paddingRightLeft: 20px;
+  }
 }
-body {
+* {
   margin: 0;
+  box-sizing: border-box;
   font-family: var(--font2);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-button, img {
+button, img, .comment {
   border-radius: 16px;
 }
 
@@ -48,10 +51,9 @@ button {
   font-weight: 500;
   color: var(--highlight2);
   background-color: var(--primary2);
-}
-
-.card {
-  border-radius: 16px 0;
+  padding: 15px;
+  border: none;
+  min-width: 209px;
 }
 
 h3 {
@@ -69,15 +71,11 @@ h4 {
   font-weight: 400;
 }
 
-#root {
-  display: grid;
-  grid-auto-rows: 113px 1fr max(441px, max-content);
-}
-
 header {
   display: flex;
-  width: min(900px, 90vw);
-  margin: 0 auto;
+  height: 113px;
+  /* width: min(900px, 90vw); */
+  /* margin: 0 auto; */
   align-items: center;
   & a {
     color: var(--highlight2);
@@ -97,8 +95,8 @@ header {
   }
 
   @media screen and (max-width: 800px) {
-    width: auto;
-    margin: 0 20px;
+    /* width: auto;
+    margin: 0 20px; */
     & nav {
       margin-left: 3vw;
     }
@@ -113,8 +111,12 @@ li {
   list-style: none;
 }
 
+header, footer, main section {
+  padding-inline: var(--paddingRightLeft);
+}
 footer {
-  padding: 70px max(calc((100vw - 900px)/2), 5vw);
+  height: max(441px, max-content);
+  padding-block: 70px;
   background-color: var(--highlight2);
   display: flex;
   flex-wrap: wrap;
@@ -142,8 +144,171 @@ footer {
   & nav, ul {
     font-size: 14px;
   }
+}
 
-  @media screen and (max-width: 800px) {
-    padding: 70px 20px;
+#hero {
+  background-color: var(--primary1);
+  display: flex;
+  justify-content: space-between;
+  padding-block: 40px;
+  color: var(--highlight1);
+  gap: 10px;
+  & h1 {
+    color: var(--primary2);
+    margin-block: -21px;
   }
+  & p {
+    margin-top: 20px;
+  }
+  & div {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    max-width: 414px;
+  }
+  & a {
+    margin-top: 68px;
+  }
+  & img {
+    width: 387px;
+    height: 415px;
+    object-fit: cover;
+    position: absolute;
+    right: var(--paddingRightLeft);
+  }
+}
+
+#highlights {
+  margin-top: 75px;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+#cards {
+  margin-block: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  border-radius: 16px 16px 0 0;
+  width: 271px;
+  height: 428px;
+  background-color: var(--highlight1);
+  overflow: hidden;
+  & > img {
+    height: 198px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0;
+  }
+}
+.card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: calc(428px - 198px);
+  & div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & p {
+    margin-top: 24px;
+  }
+  & h4 {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+  }
+  & img {
+    margin-left: 10px;
+  }
+}
+
+.price {
+  color: var(--secondary1);
+}
+
+#testimonials {
+  background-color: var(--primary1);
+  padding-top: 83px;
+  padding-bottom: 157px;
+  & h1 {
+    color: var(--primary2);
+    text-align: center;
+  }
+}
+
+#comments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.comment {
+  background-color: var(--primary2);
+  width: 210px;
+  height: 157px;
+  padding: 29px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  & h4 {
+    display: flex;
+    align-items: center;
+  }
+  & img {
+    margin-right: 10px;
+  }
+}
+
+#about {
+  padding-top: 83px;
+  padding-bottom: 157px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+  & h1 {
+    color: var(--primary1);
+    margin-block: -21px;
+  }
+  & h2 {
+    color: var(--primary2);
+  }
+  & p {
+    margin-top: 20px;
+  }
+  & #about-body {
+    max-width: 414px;
+  }
+  & img {
+    height: 402px;
+    width: 278px;
+    object-fit: cover;
+  }
+}
+
+#chefs1 {
+  object-position: 80% 20%;
+  margin-left: 170px;
+}
+
+#chefs2 {
+  object-position: 90% 70%;
+  position: absolute;
+  /* right: calc(var(--paddingRightLeft) + 170px); */
+  right: 170px;
+  top: 110px;
+  /* bottom: 58px; */
+  z-index: -1;
+}
+
+#chefsFotos {
+  position: relative;
 }
