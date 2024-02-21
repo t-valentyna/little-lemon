@@ -312,3 +312,34 @@ footer {
 #chefsFotos {
   position: relative;
 }
+
+form {
+  display: grid; 
+  /* max-width: 200px;  */
+  margin: 50px auto;
+  gap: 20px;
+  justify-content: center;
+  background-color: var(--highlight1);
+  padding: 50px;
+  position: relative;
+}
+
+select {
+  appearance: none;
+  background-color: var(--highlight1);
+  background: url(./assets/Expand\ Arrow.svg) no-repeat 97%, url(./assets/Champagne.svg) no-repeat 3%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px 0;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 16px;
+  text-align: center;
+  padding: 15px;
+  color: var(--highlight2);
+  border: none;
+}
+
+option {
+  text-align: center;
+  background-color: var(--highlight1);
+  border-bottom: var(--highlight2) dashed 1px;
+}

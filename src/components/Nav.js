@@ -5,8 +5,8 @@ function Nav() {
       <nav>
         <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/">About</Link></li>
-            <li><Link to="/">Menu</Link></li>
+            <li><Link to="/#about">About</Link></li>
+            <li><Link to="/#highlights">Menu</Link></li>
             <li><Link to="/booking">Reservations</Link></li>
             <li><Link to="/">Order online</Link></li>
             <li><Link to="/">Login</Link></li>
