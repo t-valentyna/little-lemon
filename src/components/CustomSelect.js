@@ -9,7 +9,7 @@ function CustomSelect(props) {
         className={`custom-select ${props.state ? "selected" : ""}`}
         id={props.id}
         onClick={() => setShowOptions(!showOptions)}
-        tabindex="0"
+        tabIndex="0"
         required={true}
         aria-required="true"
       >
