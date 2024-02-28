@@ -4,11 +4,14 @@ function CustomSelect(props) {
   const [showOptions, setShowOptions] = useState(false);
 
   return (
-    <div className="custom-select-container">
+    <div className="custom-select-container" >
       <div
         className={`custom-select ${props.state ? "selected" : ""}`}
         id={props.id}
         onClick={() => setShowOptions(!showOptions)}
+        tabindex="0"
+        required={true}
+        aria-required="true"
       >
         {props.state || props.name}
       </div>

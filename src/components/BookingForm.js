@@ -27,6 +27,8 @@ function BookingForm(props) {
       <label htmlFor="res-date">
         Choose date
         <input
+          required={true}
+          aria-required="true"
           className={date ? "selected" : ""}
           type="date"
           id="res-date"
@@ -47,6 +49,8 @@ function BookingForm(props) {
       <label htmlFor="guests">
         Number of guests
         <input
+          required={true}
+          aria-required="true"
           type="number"
           placeholder="0"
           min="1"
