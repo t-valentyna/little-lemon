@@ -56,7 +56,7 @@ button {
   min-width: 209px;
 }
 
-button:hover {
+button, input {
   cursor: pointer;
 }
 

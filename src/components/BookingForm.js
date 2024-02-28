@@ -2,21 +2,21 @@ import { useState } from "react";
 import CustomSelect from "./CustomSelect";
 
 function BookingForm(props) {
+  const [time, setTime] = useState("");
   const [date, setDate] = useState("");
-//   const [time, setTime] = useState("");
   const [numOfGuests, setNumOfGuests] = useState("");
   const [occasion, setOccasion] = useState("");
 
-//   const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+  //   const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
   const availableOccasions = ["Birthday", "Engagement", "Anniversary"];
 
   const handleSumbit = (e) => {
     e.preventDefault();
     alert(
-      `Form submitted with this values: date - ${date}; time - ${props.time}; number of guests - ${numOfGuests}; occasion - ${occasion}`
+      `Form submitted with this values: date - ${date}; time - ${time}; number of guests - ${numOfGuests}; occasion - ${occasion}`
     );
     setDate("");
-    props.timeSetter("");
+    setTime("");
     setNumOfGuests("");
     setOccasion("");
   };
@@ -31,14 +31,17 @@ function BookingForm(props) {
           type="date"
           id="res-date"
           value={date}
-          onChange={(e) => setDate(e.target.value)}
+          onChange={(e) => {
+            setDate(e.target.value);
+            props.updateTimes(e.target.value);
+          }}
         />
       </label>
       <CustomSelect
         option={props.availableTimes}
         name="Choose time"
-        state={props.time}
-        setter={props.timeSetter}
+        state={time}
+        setter={setTime}
         id="res-time"
       />
       <label htmlFor="guests">
@@ -63,7 +66,7 @@ function BookingForm(props) {
       />
       <button
         type="submit"
-        disabled={!(date && props.time && numOfGuests && occasion)}
+        disabled={!(date && time && numOfGuests && occasion)}
       >
         Make Your reservation
       </button>
