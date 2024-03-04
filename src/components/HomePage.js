@@ -18,7 +18,7 @@ function HomePage() {
                 <p>xjfcjhgfhgvjh jbljblhg hjvlhvl bhlb hvlhjvlhv lbhlb gkvghvkhgv hvk hvkhv hvkhv hvhkv vgvk gvkghvgh vvv.</p>
                 <Link to="/booking"><button>Reserve a table</button></Link>
             </div>
-            <img src={RestauranFood} alt="The appetizing restaurant dish" height="415" />
+            <img src={RestauranFood} alt="The appetizing restaurant dish" height="415" width="387" />
         </section>
         <section id="highlights">
             <div>
@@ -89,8 +89,8 @@ function HomePage() {
                     xjfcjhgfhgvjh jbljblhg hjvlhvl bhlb hvlhjvlhv lbhlb gkvghvkhgv hvk hvkhv hvkhv hvhkv vgvk gvkghvgh vvv.</p>
             </div>
             <div id="chefsFotos">
-                <img id="chefs1" src={Chefs1} alt="First chefs' foto" height="402" />
-                <img id="chefs2" src={Chefs2} alt="Second chefs' foto" height="402" />
+                <img id="chefs1" src={Chefs1} alt="First chefs' foto" height="402" width="278" />
+                <img id="chefs2" src={Chefs2} alt="Second chefs' foto" height="402" width="278" />
             </div>
         </section>
       </>

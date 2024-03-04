@@ -4,7 +4,7 @@ import ChefFoto from '../assets/restaurant chef B.jpg';
 function Footer() {
     return (
       <footer>
-        <img src={ChefFoto} alt="restaurant chef" height="302" />
+        <img src={ChefFoto} alt="restaurant chef" height="302" width="200" />
         <section>
             <h1>Doormat Navigation</h1>
             <Nav></Nav>

@@ -32,6 +32,7 @@ function BookingForm(props) {
           className={date ? "selected" : ""}
           type="date"
           id="res-date"
+          name="res-date"
           value={date}
           onChange={(e) => {
             setDate(e.target.value);
@@ -56,6 +57,7 @@ function BookingForm(props) {
           min="1"
           max="10"
           id="guests"
+          name="guests"
           className={numOfGuests ? "selected" : ""}
           value={numOfGuests}
           onChange={(e) => setNumOfGuests(e.target.value)}
