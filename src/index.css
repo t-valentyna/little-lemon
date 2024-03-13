@@ -411,3 +411,9 @@ label {
     display: block;
   }
 }
+
+#confirm {
+  text-align: center;
+  margin-block: 20vh;
+  color: var(--primary1);
+}

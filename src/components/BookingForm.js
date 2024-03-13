@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import CustomSelect from "./CustomSelect";
 
 function BookingForm(props) {
@@ -10,6 +11,8 @@ function BookingForm(props) {
   //   const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
   const availableOccasions = ["Birthday", "Engagement", "Anniversary"];
 
+  const navigate = useNavigate();
+
   const handleSumbit = (e) => {
     e.preventDefault();
     alert(
@@ -19,6 +22,7 @@ function BookingForm(props) {
     setTime("");
     setNumOfGuests("");
     setOccasion("");
+    navigate("/confirmed-booking");
   };
 
   return (
