@@ -76,7 +76,7 @@ function BookingForm(props) {
       />
       <button
         type="submit"
-        disabled={!(date && time && numOfGuests && occasion)}
+        disabled={!(date && time && numOfGuests > 0 && occasion)}
       >
         Make Your reservation
       </button>
