@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import RestauranFood from '../assets/restauranfood.jpg';
-import GreekSalad from '../assets/greek salad.jpg';
+import RestauranFood from '../assets/restauranfood (Large).jpg';
+import GreekSalad from '../assets/greek salad (Large).jpg';
 import Bruchetta from '../assets/bruchetta.svg';
 import LemonDesert from '../assets/lemon dessert.jpg';
 import Scooter from '../assets/Scooter.svg';
 import ClientIcon from '../assets/Vector.svg';
-import Chefs1 from '../assets/Mario and Adrian A.jpg';
-import Chefs2 from '../assets/Mario and Adrian b.jpg';
+import Chefs1 from '../assets/Mario and Adrian A (Large).jpg';
+import Chefs2 from '../assets/Mario and Adrian b (Large).jpg';
 
 function HomePage() {
     return (
@@ -26,30 +26,30 @@ function HomePage() {
                 <button>Online menu</button>
             </div>
             <div id="cards">
-                <div class="card">
+                <div className="card">
                     <img src={GreekSalad} alt="Greek salad" height="198" />
-                    <div class="card-body">
+                    <div className="card-body">
                         <div>
                         <h3>Greek salad</h3>
-                        <span class="price">$ 12.99</span>
+                        <span className="price">$ 12.99</span>
                     </div>
                     <p>xjfcjhgfhgvjh jbljblhg hjvlhvl bhlb hvlhjvlhv lbhlb gkvghvkhgv hvk hvkhv hvkhv hvhkv vgvk gvkghvgh vvv.</p>
                     <h4>Order a delivery <img src={Scooter} alt="scooter" height="23" /></h4></div>
                 </div>
-                <div class="card">
+                <div className="card">
                     <img src={Bruchetta} alt="Bruchetta" height="198" />
-                    <div class="card-body"><div>
+                    <div className="card-body"><div>
                         <h3>Bruchetta</h3>
-                        <span class="price">$ 12.99</span>
+                        <span className="price">$ 12.99</span>
                     </div>
                     <p>xjfcjhgfhgvjh jbljblhg hjvlhvl bhlb hvlhjvlhv lbhlb gkvghvkhgv hvk hvkhv hvkhv hvhkv vgvk gvkghvgh vvv.</p>
                     <h4>Order a delivery <img src={Scooter} alt="scooter" height="23" /></h4></div>
                 </div>
-                <div class="card">
+                <div className="card">
                     <img src={LemonDesert} alt="Lemon desert" height="198" />
-                    <div class="card-body"><div>
+                    <div className="card-body"><div>
                         <h3>Lemon desert</h3>
-                        <span class="price">$ 12.99</span>
+                        <span className="price">$ 12.99</span>
                     </div>
                     <p>xjfcjhgfhgvjh jbljblhg hjvlhvl bhlb hvlhjvlhv lbhlb gkvghvkhgv hvk hvkhv hvkhv hvhkv vgvk gvkghvgh vvv.</p>
                     <h4>Order a delivery <img src={Scooter} alt="scooter" height="23" /></h4></div>
@@ -59,22 +59,22 @@ function HomePage() {
         <section id="testimonials">
             <h1>Testimonials</h1>
             <div id="comments">
-                <div class="comment">
+                <div className="comment">
                     <h3>Rating</h3>
                     <h4><img src={ClientIcon} alt="Client icon" height="29" />Name</h4>
                     <p>Review</p>
                 </div>
-                <div class="comment">
+                <div className="comment">
                     <h3>Rating</h3>
                     <h4><img src={ClientIcon} alt="Client icon" height="29" />Name</h4>
                     <p>Review</p>
                 </div>
-                <div class="comment">
+                <div className="comment">
                     <h3>Rating</h3>
                     <h4><img src={ClientIcon} alt="Client icon" height="29" />Name</h4>
                     <p>Review</p>
                 </div>
-                <div class="comment">
+                <div className="comment">
                     <h3>Rating</h3>
                     <h4><img src={ClientIcon} alt="Client icon" height="29" />Name</h4>
                     <p>Review</p>

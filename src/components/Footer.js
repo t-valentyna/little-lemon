@@ -1,5 +1,5 @@
 import Nav from './Nav';
-import ChefFoto from '../assets/restaurant chef B.jpg';
+import ChefFoto from '../assets/restaurant chef B (Large).jpg';
 
 function Footer() {
     return (
