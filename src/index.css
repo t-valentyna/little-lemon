@@ -96,7 +96,7 @@ header {
   & li {
     display: inline-block;
   }
-  & nav {
+  & #nav-wrapper {
     width: 100%;
     margin-left: 40px;
   }
@@ -108,9 +108,48 @@ header {
   @media screen and (max-width: 800px) {
     /* width: auto;
     margin: 0 20px; */
-    & nav {
+    & #nav-wrapper {
       margin-left: 3vw;
     }
+  }
+
+  @media screen and (max-width: 650px) {
+    justify-content: space-evenly;
+    & #nav-wrapper {
+      width: auto;
+      margin-left: 0;
+    }
+    & #hamburger {
+      display: block;
+    }
+    & nav {
+      display: none;
+    }
+    & #nav-wrapper:focus-within nav {
+      display: flex;
+      position: absolute;
+      top: 113px;
+      left: 0;
+      & ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        z-index: 1;
+        background-color: var(--primary2);
+      }
+    }
+  }
+}
+
+#hamburger {
+  min-width: fit-content;
+  line-height: 20px;
+  display: none;
+  & img {
+    border-radius: 0;
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px var(--primary1);
   }
 }
 
